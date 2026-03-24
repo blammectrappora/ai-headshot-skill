@@ -88,14 +88,4 @@ node aiheadshot.js "executive portrait, woman, modern office background" --size 
 
 ---
 
-Built with Claude Code · Powered by Neta
-
-## Example Output
-
-```bash
-node aiheadshot.js "professional studio headshot of a person, clean neutral background, soft studio lighting, sharp focus on face, business casual attire, confident natural expression, high resolution, photorealistic"
-```
-
-![Example output](https://oss.talesofai.cn/picture/66f12b83-2349-4c05-ab43-16dfae9fb943.webp)
-
-> Prompt: *"professional studio headshot of a person, clean neutral background, soft studio lighting, sharp focus on face, business casual attire, confident natural expression, high resolution, photorealistic"*
+Built with [Claude Code](https://claude.ai/claude-code) · Powered by [Neta](https://www.neta.art/) · [API Docs](https://www.neta.art/open/)
