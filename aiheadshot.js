@@ -87,7 +87,7 @@ if (refUuid) {
 
 // --- POST to generate image ---
 async function generateImage() {
-  const res = await fetch("https://api.talesofai.com/v3/make_image", {
+  const res = await fetch(`${process.env.NETA_API_URL || 'https://api.talesofai.cn'}/v3/make_image`, {
     method: "POST",
     headers: HEADERS,
     body: JSON.stringify(body),
@@ -120,7 +120,7 @@ async function pollTask(taskUuid) {
     await new Promise((r) => setTimeout(r, delayMs));
 
     const res = await fetch(
-      `https://api.talesofai.com/v1/artifact/task/${taskUuid}`,
+      `${process.env.NETA_API_URL || 'https://api.talesofai.cn'}/v1/artifact/task/${taskUuid}`,
       { headers: HEADERS }
     );
 
@@ -132,9 +132,11 @@ async function pollTask(taskUuid) {
     const data = await res.json();
     const status = data.task_status;
 
-    if (status === "PENDING" || status === "MODERATION") {
-      continue;
-    }
+    if (['PENDING', 'MODERATION'].includes(status)) { continue; }
+  if (['FAILURE', 'TIMEOUT', 'DELETED', 'ILLEGAL_IMAGE'].includes(status)) {
+    console.error('Error: generation failed with status ' + status + (pollData.err_msg ? ' — ' + pollData.err_msg : ''));
+    process.exit(1);
+  }
 
     // Done — extract URL
     const url =
