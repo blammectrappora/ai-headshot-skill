@@ -63,8 +63,6 @@ The script resolves your `NETA_TOKEN` in this order:
 
 1. `--token <value>` CLI flag
 2. `NETA_TOKEN` environment variable
-3. `~/.openclaw/workspace/.env` — line matching `NETA_TOKEN=...`
-4. `~/developer/clawhouse/.env` — line matching `NETA_TOKEN=...`
 
 **Recommended:** add to your shell profile or `.env` file:
 ```bash
@@ -85,6 +83,12 @@ node aiheadshot.js "friendly professional headshot, warm smile" --size square
 # Landscape for LinkedIn banner
 node aiheadshot.js "executive portrait, woman, modern office background" --size landscape
 ```
+
+## Example Output
+
+![Generated example](https://oss.talesofai.cn/picture/66f12b83-2349-4c05-ab43-16dfae9fb943.webp)
+
+---
 
 ## About Neta
 
@@ -129,7 +133,3 @@ node aiheadshot.js "your prompt" --token your_token_here
 > **API endpoint:** defaults to `api.talesofai.com` (Open Platform tokens).  
 > China users: set `NETA_API_BASE_URL=https://api.talesofai.com` to use the China endpoint.
 
-
----
-
-Built with [Claude Code](https://claude.ai/claude-code) · Powered by [Neta](https://www.neta.art/) · [API Docs](https://www.neta.art/open/)
