@@ -84,8 +84,4 @@ node aiheadshot.js "executive portrait, woman, modern office background" --size 
 
 ## Example Output
 
-![Generated example](https://oss.talesofai.cn/picture/66f12b83-2349-4c05-ab43-16dfae9fb943.webp)
-
----
-
-This skill requires a Neta API token (free trial available at https://www.neta.art/open/).
+![Generated example](https://cdn.talesofai.com/picture/66f12b83-2349-4c05-ab43-16dfae9fb943.webp)
